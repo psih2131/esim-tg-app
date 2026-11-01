@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@pinia/nuxt'],
+  modules: ['@pinia/nuxt', 'nuxt-swiper'],
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   css: ['~/assets/style/main.scss'],
@@ -16,6 +16,12 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      meta: [
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no',
+        },
+      ],
       script: [{ src: 'https://telegram.org/js/telegram-web-app.js' }],
     },
   },

@@ -1,0 +1,84 @@
+
+
+.app-menu {
+	position: fixed;
+	left: 50%;
+	bottom: 16px;
+	z-index: 10;
+	transform: translateX(-50%);
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	width: max-content;
+	max-width: calc(100% - 24px);
+	padding: 8px;
+	background: #ececec;
+	border-radius: 999px;
+
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		flex: 0 0 auto;
+		gap: 0;
+		height: 48px;
+		padding: 6px;
+		border-radius: 999px;
+		background: $white;
+		color: $black1;
+		overflow: hidden;
+		transition:
+			background-color 0.45s ease-in-out,
+			color 0.45s ease-in-out,
+			padding 0.45s ease-in-out,
+			gap 0.45s ease-in-out;
+	}
+
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 36px;
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		transition: background-color 0.45s ease-in-out, color 0.45s ease-in-out;
+
+		svg {
+			width: 20px;
+			height: 20px;
+			fill: none;
+			stroke: currentColor;
+			stroke-width: 1.8;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+		}
+	}
+
+	&__label {
+		max-width: 0;
+		opacity: 0;
+		overflow: hidden;
+		white-space: nowrap;
+		font-size: 14px;
+		font-weight: 600;
+		transition: max-width 0.45s ease-in-out, opacity 0.3s ease;
+	}
+
+	a.is-open {
+		gap: 8px;
+		padding: 6px 14px 6px 6px;
+		background: $black1;
+		color: $white;
+
+		.app-menu__icon {
+			background: #c6f35a;
+			color: $black1;
+		}
+
+		.app-menu__label {
+			max-width: 140px;
+			opacity: 1;
+		}
+	}
+}

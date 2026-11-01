@@ -1,0 +1,37 @@
+.pay-button {
+	position: fixed;
+	left: 15px;
+	right: 15px;
+	bottom: 96px;
+	z-index: 11;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	height: 54px;
+	border-radius: 999px;
+	background: #c6f35a;
+	color: $black1;
+	font-family: $titleFont;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1;
+	transform: translateY(calc(100% + 120px));
+	transition: transform 0.4s ease;
+	pointer-events: none;
+
+	svg {
+		width: 20px;
+		height: 20px;
+		fill: none;
+		stroke: currentColor;
+		stroke-width: 2;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+	}
+
+	&.is-visible {
+		transform: translateY(0);
+		pointer-events: auto;
+	}
+}

@@ -32,6 +32,8 @@ body::-webkit-scrollbar-thumb {
 
 }
 
+
+
 input {
 	outline: 0 none !important;
 
@@ -83,6 +85,12 @@ svg {
 	shape-rendering: geometricPrecision;
 }
 
+html,
+body {
+	background: $white;
+	touch-action: pan-x pan-y;
+}
+
 body {
 	font-family: $textFont;
 	color: $black1;
@@ -92,7 +100,11 @@ ul {
 	margin-bottom: 0;
 }
 
-
+.app-wrapper{
+	padding: 15px;
+	padding-top: 96px;
+	padding-bottom: 96px;
+}
 .container {
 	width: 1350px;
 	margin: 0 auto;
